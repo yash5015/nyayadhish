@@ -164,6 +164,8 @@ def view_service(request, id):
     fm = caseForm(instance=serv)
     return render(request, 'view_service.html', {'form': fm})
 
+def checkstatus(request):
+    return render(request, 'checkstatus.html')
 
 def user_login(request):
     if not request.user.is_authenticated:

@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block css%}
+<link rel="stylesheet" href="{% static 'style/admin.css' %}">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+{% endblock css%}
+
+{% block body %} {% csrf_token %}
+<div class="admin-form">
+    <div class="form-box">
+        <form action="" method="POST" novalidate>
+            {% csrf_token %} {% if form.non_field_errors %} {% for error in form.non_field_errors %}
+            <div class="error">
+                <p>{{error}}</p>
+            </div>
+            {% endfor %} {% endif %} {% for fm in form %}
+            <label for="" class="label-field"> {{fm.label_tag}}</label>{{fm}}<div class="errorlist">
+                {{fm.errors|striptags}}</div>
+            <br /><br />
+            {% endfor %}
+        </form>
+    </div>
+</div>
+{% endblock body %}

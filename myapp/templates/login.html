@@ -14,47 +14,34 @@
 </head>
 
 <body>
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark" style="z-index: 1;">
-    <a class="navbar-brand" href="/">NYAYADHISH</a>
+  <!-- <nav class="navbar navbar-expand-lg navbar-dark bg-dark" style="z-index: 1;">
+    <a class="navbar-brand" href="/" style="display: flex;"> <img src="{% static 'assets/civilright.png' %}" alt=""
+        height="35px" width="40px" style="filter: invert(1);">
+      <div class="subs" style="    margin-left: 8px;">
+        <p style="margin-bottom: -19px;">
+          NYAYADHISH</p>
+        <span style="font-size: 15px;"> <sub> ministry of Law and Justice</sub></span>
+      </div>
+    </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
       aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
 
-    <!-- <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      {% if request.user.is_authenticated %}
-      <ul class="navbar-nav mr-auto my-2 my-lg-0">
-        <li class="nav-item active">
-          <a class="nav-link" href="{% url 'home' %}">Home <span class="sr-only">(current)</span></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="{% url 'service' %}">service</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="{% url 'admin' %}">Upload Cases</a>
-        </li>
-
-
-      </ul>
-      <form class="form-inline my-2 my-lg-0">
-        <button class="btn btn-outline-warning my-2 mx-2 my-sm-0" type="submit"> <a href="{% url 'logout' %}">Logout</a>
-
-        </button>
-      </form>
-      {% else %}
-      <form class="form-inline my-2 my-lg-0">
-        <button class="btn btn-outline-warning my-2 mx-2 my-sm-0" type="submit">Check Status
-        </button>
-        <button class="btn btn-outline-danger my-2 my-sm-0" type="submit">
-          <a href="{% url 'login' %}"> Admin Login</a>
-        </button>
-      </form>
-      {% endif %}
-    </div> -->
-  </nav>
+  </nav> -->
   <section class="loginpage">
     <div class="login-container">
-      <h1>login</h1>
+      <a class="navbar-brand" href="/" style="display: flex;    margin: 15px;"> <img
+          src="{% static 'assets/civilright.png' %}" alt="" height="35px" width="40px">
+        <div class="subs" style="    margin-left: 8px;">
+          <p style="margin-bottom: -19px;">
+            NYAYADHISH</p>
+          <span style="font-size: 15px;"> <sub> ministry of Law and Justice</sub></span>
+        </div>
+      </a>
+      <h1>
+        Login
+      </h1>
       <div class="loginform">
         <form action="" method="POST" novalidate>
           {% csrf_token %} {% if form.non_field_errors %}

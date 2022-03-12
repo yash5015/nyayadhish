@@ -1,0 +1,111 @@
+.form-box {
+  width: 50%;
+  /* height: 500px; */
+  position: relative;
+  margin: 100px auto;
+  /* background: rgba(0, 0, 0, 0.3); */
+  background: aliceblue;
+  padding: 10px;
+  overflow: hidden;
+}
+.button-box {
+  width: 220px;
+  margin: 35px auto;
+  position: relative;
+  box-shadow: 0 0 20px 9px #ff61241f;
+  border-radius: 30px;
+}
+.toggle-btn {
+  padding: 10px 30px;
+  cursor: pointer;
+  background: transparent;
+  border: 0;
+  outline: none;
+  position: relative;
+}
+#btn {
+  top: 0;
+  left: 0;
+  position: absolute;
+  width: 110px;
+  height: 100%;
+  background: #f3c693;
+  border-radius: 30px;
+  transition: 0.5s;
+  margin: 10px;
+}
+input[type="text"],
+input[type="email"] {
+  width: 100%;
+  padding: 10px 0;
+  margin: 5px 0;
+  border-left: 0;
+  border-top: 0;
+  border-right: 0;
+  border-bottom: 1px solid black;
+  outline: none;
+  background: transparent;
+}
+.input-group-login {
+  top: 150px;
+  position: absolute;
+  width: 280px;
+  transition: 0.5s;
+}
+.input-group-register {
+  top: 120px;
+  position: absolute;
+  width: 280px;
+  transition: 0.5s;
+}
+
+.label-field {
+  font-size: 20px;
+  margin: 8px auto;
+}
+.submit-btn {
+  width: 85%;
+  padding: 10px 30px;
+  cursor: pointer;
+  display: block;
+  margin: 20px auto;
+  background: #f3c693;
+  border: 0;
+  outline: none;
+  border-radius: 30px;
+}
+.check-box {
+  margin: 30px 10px 34px 0;
+}
+span {
+  color: #777;
+  font-size: 12px;
+  bottom: 68px;
+  position: absolute;
+}
+#login {
+  left: 50px;
+}
+#login input {
+  font-size: 15;
+}
+#register {
+  left: 450px;
+}
+#register input {
+  font-size: 15;
+}
+
+.admin-form {
+  width: 50%;
+  background: aliceblue;
+  display: flex;
+  justify-content: center;
+  margin: 100px auto;
+  flex-direction: column;
+}
+
+.errorlist {
+  color: red;
+  font-family: cursive;
+}
