@@ -1,0 +1,73 @@
+{% extends 'base.html' %} {% load static %} {% block css %}
+<link rel="stylesheet" href="{% static 'style/admin.css' %}" />
+<link rel="stylesheet" href="{% static 'style/service.css' %}" />
+<link rel="stylesheet" href="{% static 'style/style.css' %}" />
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+{% endblock css %} {% block body %}
+<div class="assign-date-bg">
+    <img src="https://imageio.forbes.com/specials-images/dam/imageserve/1128442176/0x0.jpg?format=jpg&width=1200&fit=bounds"
+        alt="">
+</div>
+<div class="date-container">
+    <section class="assign-dates">
+        <div class="date-form">
+            <h1>Assign Case Date</h1>
+            <div class="form-box">
+                <form action="" method="POST">
+                    {% csrf_token %}
+                    <label for="no_cases_per_day">No of cases per day: </label>
+                    <input type="text" name="assign" required />
+                    <label for="no_of_months">Assign for upcoming Days: </label>
+                    <input type="text" name="tempsize" required />
+                    <button type="submit" class="submit-btn">Submit</button>
+                </form>
+            </div>
+        </div>
+    </section>
+    <!-- <section>
+        {% if dictt %}
+        <h1>Assign Dates</h1>
+        <div class="dates">
+            {% for key, values in dictt.items %}
+            <table>
+                <h2>{{key}}</h2>
+                <tr>
+                    <th>Name of plaintiff party</th>
+                    <th>Name of defendant</th>
+                    <th>Email of plaintiff</th>
+                    <th>Email of defendant</th>
+                    <th>Section</th>
+                    <th>Chart sheet</th>
+                    <th>Case No</th>
+                    <th>Gravity</th>
+                    <th>More...</th>
+                </tr>
+
+                {% for lst in values %}
+                <tr>
+                    {% for i in lst %}
+                    <td>{{i.Name_of_plaintiff_party}}</td>
+                    <td>{{i.Name_of_defendant}}</td>
+                    <td>{{i.Email_of_plaintiff}}</td>
+                    <td>{{i.Email_of_defendant}}</td>
+                    <td>{{i.section}}</td>
+                    <td>{{i.chart_sheet_filling_date}}</td>
+                    <td>{{i.case_No}}</td>
+                    <td>{{i.gravity}}</td>
+                    <td><a href="{% url 'view_service' i.id%}">View More...</a></td>
+                    {% endfor %}
+                </tr>
+                {% endfor %} {% endfor %}
+            </table>
+        </div>
+        <div class="confirm">
+            <p>Are you sure?</p>
+            <button type="submit" class="submit-btn">Save to Database</button>
+        </div>
+        {% endif %}
+    </section> -->
+
+</div>
+{% endblock body %}

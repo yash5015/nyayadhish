@@ -1,0 +1,57 @@
+h1 {
+  font-size: 30px;
+  margin-bottom: 40px;
+  font-family: "Oswald", sans-serif;
+  font-family: "Roboto", sans-serif;
+}
+
+.loginpage {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: url("https://userscontent2.emaze.com/images/5921454d-88fd-4bce-8a9a-9403ecfead90/837a8f4ae31478f492dd8b74c91449d6.jpg")
+    no-repeat center center / cover;
+}
+
+.submit-btn {
+  width: 85%;
+  padding: 10px 30px;
+  cursor: pointer;
+  display: block;
+  margin: 20px auto;
+  background: #f3c693;
+  border: 0;
+  outline: none;
+  border-radius: 30px;
+}
+
+.login-container {
+  width: 350px;
+  height: 350px;
+  margin: 100px auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: aliceblue;
+  border-radius: 8px;
+  border: 1px solid black;
+  box-shadow: 2px 8px 26px 2px rgb(255 255 255 / 40%);
+}
+
+input[type="text"],
+input[type="password"] {
+  margin: 10px auto;
+  border: none;
+  border-bottom: 1px solid black;
+  height: 30px;
+  padding: 8px;
+  background: aliceblue;
+  font-size: 15px;
+}
+
+label {
+  font-family: "Roboto", sans-serif;
+}

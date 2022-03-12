@@ -1,0 +1,47 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="{% static 'style/style.css' %}" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300&family=Roboto:wght@300&display=swap"
+    rel="stylesheet">
+  {% block css %} {% endblock css %}
+  <title>Document</title>
+</head>
+
+<body>
+  <div class="full-page">
+    <div class="navbar">
+      <div>
+        <a href="website.html">Geeklords</a>
+      </div>
+      <nav>
+        <ul id="MenuItems">
+          {% if user.is_authenticated %}
+          <li><a href="/">Home</a></li>
+          <li><a href="{% url 'service' %}">Services</a></li>
+          <li><a href="{% url 'admin' %}">Upload Cases</a></li>
+          <li><a href="{% url 'logout' %}">Logout</a></li>
+          {% else %}
+          <li><a href="{% url 'login' %}">Login</a></li>
+          {% endif %}
+        </ul>
+      </nav>
+    </div>
+    {% block body %}{% endblock body %}
+  </div>
+  <!-- Optional JavaScript; choose one of the two! -->
+
+  <!-- Option 1: Bootstrap Bundle with Popper -->
+  <script src="{% static 'script/script.js' %}"></script>
+  {% block script %}{% endblock script %}
+</body>
+
+</html>
